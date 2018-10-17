@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 17, 2018 at 03:21 PM
+-- Generation Time: Oct 17, 2018 at 04:54 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -62,7 +62,7 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id_category`, `id_parent`, `seotitle`, `picture`, `active`) VALUES
-(1, 1, 'indonesiaku', '', 'Y');
+(6, 0, 'indonesiaku', '', 'Y');
 
 -- --------------------------------------------------------
 
@@ -82,8 +82,8 @@ CREATE TABLE `category_description` (
 --
 
 INSERT INTO `category_description` (`id_category_description`, `id_category`, `id_language`, `title`) VALUES
-(1, 1, 1, 'Indonesiaku'),
-(2, 1, 2, 'My Indonesia');
+(11, 6, 1, 'Indonesiaku'),
+(12, 6, 2, 'Indonesian');
 
 -- --------------------------------------------------------
 
@@ -539,7 +539,7 @@ CREATE TABLE `traffic` (
 
 INSERT INTO `traffic` (`ip`, `browser`, `os`, `platform`, `country`, `city`, `date`, `hits`, `online`) VALUES
 ('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'Windows', '', '', '2018-10-13', 29, '1539432604'),
-('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'Windows', '', '', '2018-10-17', 31, '1539782222');
+('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'Windows', '', '', '2018-10-17', 47, '1539787916');
 
 -- --------------------------------------------------------
 
@@ -569,7 +569,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `username`, `password`, `nama_lengkap`, `email`, `no_telp`, `bio`, `picture`, `level`, `block`, `id_session`, `tgl_daftar`, `forget_key`, `locktype`) VALUES
-(1, 'admin', '0192023a7bbd73250516f069df18b500', 'Super Administrator', 'dikyardianto8@gmail.com', '000-0000-0000', 'No matter how exciting or significant a person\'s life is, a poorly written biography will make it seem like a snore. On the other hand, a good biographer can draw insight from an ordinary life-because they recognize that even the most exciting life is an ordinary life! After all, a biography isn\'t supposed to be a collection of facts assembled in chronological order; it\'s the biographer\'s interpretation of how that life was different and important.', '', '1', 'N', '0llbajlm1nl03j1jqiboe6si4c', '2018-10-13', NULL, '0');
+(1, 'admin', '0192023a7bbd73250516f069df18b500', 'Super Administrator', 'dikyardianto8@gmail.com', '000-0000-0000', 'No matter how exciting or significant a person\'s life is, a poorly written biography will make it seem like a snore. On the other hand, a good biographer can draw insight from an ordinary life-because they recognize that even the most exciting life is an ordinary life! After all, a biography isn\'t supposed to be a collection of facts assembled in chronological order; it\'s the biographer\'s interpretation of how that life was different and important.', '', '1', 'N', '18jv5j8c7v7u22v94tsruqglj8', '2018-10-13', NULL, '0');
 
 -- --------------------------------------------------------
 
@@ -751,13 +751,13 @@ ALTER TABLE `album`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id_category` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_category` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `category_description`
 --
 ALTER TABLE `category_description`
-  MODIFY `id_category_description` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_category_description` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `comment`
