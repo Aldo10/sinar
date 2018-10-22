@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2018 at 05:41 AM
+-- Generation Time: Oct 22, 2018 at 07:09 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -40,8 +40,8 @@ CREATE TABLE `album` (
 --
 
 INSERT INTO `album` (`id_album`, `title`, `seotitle`, `active`) VALUES
-(1, 'Pure', 'pure', 'Y'),
-(2, 'Plain', 'plain', 'Y');
+(1, 'Mobil', 'mobil', 'Y'),
+(2, 'Perbaikan Mobil', 'perbaikan-mobil', 'Y');
 
 -- --------------------------------------------------------
 
@@ -62,9 +62,7 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id_category`, `id_parent`, `seotitle`, `picture`, `active`) VALUES
-(6, 0, 'indonesiaku', '', 'Y'),
-(7, 0, 'motivasi', '', 'Y'),
-(8, 0, 'duniaku', '', 'Y');
+(9, 0, 'tugas-dan-fungsi', '', 'Y');
 
 -- --------------------------------------------------------
 
@@ -84,12 +82,8 @@ CREATE TABLE `category_description` (
 --
 
 INSERT INTO `category_description` (`id_category_description`, `id_category`, `id_language`, `title`) VALUES
-(11, 6, 1, 'Indonesiaku'),
-(12, 6, 2, 'Indonesian'),
-(13, 7, 1, 'Motivasi'),
-(14, 7, 2, 'Motivasion'),
-(15, 8, 1, 'Duniaku'),
-(16, 8, 2, 'Lifestyle');
+(17, 9, 1, 'Tugas dan Fungsi'),
+(18, 9, 2, 'Tugas dan Fungsi');
 
 -- --------------------------------------------------------
 
@@ -174,14 +168,12 @@ CREATE TABLE `gallery` (
 --
 
 INSERT INTO `gallery` (`id_gallery`, `id_album`, `title`, `content`, `picture`) VALUES
-(1, 1, 'Coloration', '', 'coloration.jpg'),
-(2, 2, 'Legs On Table', '', 'legs_on_table.jpg'),
-(3, 1, 'Shop Counter', '', 'shop_counter.jpg'),
-(4, 2, 'Work Desk', '', 'work_desk.jpg'),
-(5, 1, 'City From Sky', '', 'city_from_sky.jpg'),
-(6, 2, 'Traction', '', 'traction.jpg'),
-(7, 1, 'Still Life White', '', 'still_life_white.jpg'),
-(8, 2, 'Coffee In Heart', '', 'coffee_in_heart.jpg');
+(9, 2, 'Perbaikan Shock', '', 'img_20181018_091513.png'),
+(10, 2, 'Pengecekan Mobil', '', 'img_20181018_091202_1.png'),
+(11, 2, 'Pendempulan Mobil', '', 'img_20181018_091240.png'),
+(12, 1, 'Mobil Parkir', '', 'img_20181018_091133.png'),
+(13, 1, 'Stand by', '', 'img_20181018_091246.png'),
+(14, 2, 'Pengelasan Mobil', '', 'img_20181018_091303.png');
 
 -- --------------------------------------------------------
 
@@ -259,8 +251,8 @@ INSERT INTO `menu` (`id`, `parent_id`, `title`, `url`, `class`, `position`, `gro
 (49, 0, 'Home', './', '', 1, 3, 'Y', 'none'),
 (50, 0, 'Profil', 'pages/profil', '', 3, 2, 'Y', 'none'),
 (51, 50, 'Visi & Misi', 'pages/visi-misi', '', 1, 2, 'Y', 'none'),
-(56, 0, 'Galeri', 'album', '', 8, 2, 'Y', 'none'),
-(57, 0, 'Kontak', 'contact', '', 9, 2, 'Y', 'none'),
+(56, 0, 'Galeri', 'album', '', 5, 2, 'Y', 'none'),
+(57, 0, 'Kontak', 'contact', '', 6, 2, 'Y', 'none'),
 (58, 0, 'About Us', 'pages/tentang-kami', '', 2, 3, 'Y', 'none'),
 (59, 58, 'Services', 'pages/layanan', '', 1, 3, 'Y', 'none'),
 (60, 0, 'Indonesiaku', 'category/indonesiaku', '', 50, 3, 'Y', 'none'),
@@ -269,7 +261,8 @@ INSERT INTO `menu` (`id`, `parent_id`, `title`, `url`, `class`, `position`, `gro
 (63, 0, 'Success', 'category/sukses', '', 50, 3, 'Y', 'none'),
 (64, 0, 'Gallery', 'album', '', 50, 3, 'Y', 'none'),
 (65, 0, 'Contact', 'contact', '', 50, 3, 'Y', 'none'),
-(66, 0, 'Sejarah', 'pages/sejarah', '', 2, 2, 'Y', 'none');
+(66, 0, 'Sejarah', 'pages/sejarah', '', 2, 2, 'Y', 'none'),
+(67, 0, 'Tugas dan Fungsi', 'category/tugas-dan-fungsi', '', 4, 2, 'Y', 'none');
 
 -- --------------------------------------------------------
 
@@ -360,9 +353,9 @@ CREATE TABLE `pages_description` (
 INSERT INTO `pages_description` (`id_pages_description`, `id_pages`, `id_language`, `title`, `content`) VALUES
 (1, 1, 1, 'Profil', ''),
 (2, 1, 2, 'Profile', ''),
-(3, 2, 1, 'Visi &amp; Misi', ''),
+(3, 2, 1, 'Visi &amp; Misi', '&lt;p style=&quot;margin: 0in 0in 7.9pt; text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;&lt;img src=&quot;http://localhost/sinar/po-content/uploads/img_20181018_091056.png&quot; alt=&quot;&quot; width=&quot;521&quot; height=&quot;391&quot; /&gt;&lt;/span&gt;&lt;/p&gt;\r\n&lt;p style=&quot;margin: 0in 0in 7.9pt 0in;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;Visi Perusahaan:&lt;/span&gt;&lt;/p&gt;\r\n&lt;p style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;Menjadi salah satu perusahaan jasa angkutan yang terpercaya di bidang ekspedisi angkutan darat yang berfokus pada pelayanan, standart kualitas, dan mengutamakan kepuasan pelanggan.&lt;/span&gt;&lt;/p&gt;\r\n&lt;p style=&quot;box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; margin: 0in 0in 7.9pt 0in;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;\r\n&lt;p style=&quot;box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; margin: 0in 0in 7.9pt 0in;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;Misi Perusahaan:&lt;/span&gt;&lt;/p&gt;\r\n&lt;p style=&quot;box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; margin: 0in 0in 7.9pt 0in;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;1.&amp;nbsp;Menerapkan sistem dan prosedur pelayanan jasa secara profesional.&lt;/span&gt;&lt;/p&gt;\r\n&lt;p style=&quot;box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; margin: 0in 0in 7.9pt 0in;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;2.&amp;nbsp;Mengutamakan kepuasan konsumen dengan memberikan pelayanan terbaik&lt;/span&gt;&lt;/p&gt;\r\n&lt;p style=&quot;box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; margin: 0in 0in 7.9pt 0in;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;3.&amp;nbsp;Membangun kemitraan yang saling mendukung dan menguntungkan&lt;/span&gt;&lt;/p&gt;\r\n&lt;p style=&quot;box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; margin: 0in 0in 7.9pt 0in;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;4. Membentuk tenaga kerja dengan etos kerja yang tinggi sehingga menciptakan rasa aman dan tenang bagi rekan bisnis sehingga terciptanya kepercayaan publik&lt;/span&gt;&lt;/p&gt;'),
 (4, 2, 2, 'Visi &amp; Misi', ''),
-(5, 3, 1, 'Sejarah', '&lt;p&gt;PT Sinar Sakti Sampoerna didirikan oleh bapak SUGIHARTO pada tahun1987. dan alamat pada perusahaan ini di jalan branti raya. Pt ini bertujuan untuk membuat jasa angkutan.&lt;/p&gt;'),
+(5, 3, 1, 'Sejarah', '&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;http://localhost/sinar/po-content/uploads/img_20181018_092234.png&quot; alt=&quot;&quot; width=&quot;493&quot; height=&quot;370&quot; /&gt;&lt;/p&gt;\r\n&lt;p style=&quot;margin: 0in 0in 7.9pt 0in;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;Pemilik PT Sinar Sakti Sampoera ini adalah Bapak Sugiharto. Beliau adalah pengusaha yang sangat gigih dalam berjuang untuk mendapatkan kesuksesan seperti sekarang ini. PT Sinar Sakti Sampoerna ini dibangun pada tahun 1998 pada saat itu hanya mempunyai 4 mobil saja untuk menjalankan usaha sebagai angkutan darat (ekspedisi), 1 mobil milik pribadi dan 3 mobilnya milik orang tuanya. dan Pada tahun 2000 Bapak Sugiharto bertemu dengan rekan bisinis yang dimana disini diberikan kepercayaan untuk bisa mengambil mobil tanpa adanya DP, bapak tersebuk Bernama Hastono iyalah pemilih Showroom mobil. Lambat tahun usaha berjalan dan sehingga sudah banyak yang tahu dengan PT Sinar Sakti Sampoerna ini menyiapkan mobil untuk keperluan perusahaan-perusahaan. Pada saat itu memasarkannya hanya dengan dari mulut kemulut saja, tidak ada perantara apapun. dan pada saat ini tahun 2018 PT Sinar Sakti Sampoerna yang dipimpin oleh Bapak Sugiharto sudah memiliki kurang lebih 45 mobil diantaranya: Ragassa, Engkel, dan Tronton).&amp;nbsp;&lt;/span&gt;&lt;/p&gt;'),
 (6, 3, 2, 'Sejarah', '');
 
 -- --------------------------------------------------------
@@ -387,6 +380,16 @@ CREATE TABLE `post` (
   `hits` int(10) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `post`
+--
+
+INSERT INTO `post` (`id_post`, `seotitle`, `tag`, `date`, `time`, `publishdate`, `editor`, `active`, `headline`, `comment`, `picture`, `picture_description`, `hits`) VALUES
+(1, 'montir-bengkel', 'montir', '2018-10-22', '11:43:11', '2018-10-22 11:43:11', 1, 'Y', 'N', 'Y', 'img_20181018_091202.png', '', 1),
+(2, 'operator', 'operator', '2018-10-22', '11:44:53', '2018-10-22 11:44:53', 1, 'Y', 'N', 'Y', 'img_20181018_092338.png', '', 1),
+(3, 'bengkel-mobil', 'bengkel', '2018-10-22', '12:00:03', '2018-10-22 12:00:03', 1, 'Y', 'N', 'Y', 'img_20181018_092820.png', '', 1),
+(4, 'tempat-parkir-mobil', 'parkir', '2018-10-22', '12:03:19', '2018-10-22 12:03:19', 1, 'Y', 'N', 'Y', 'img_20181018_091556.png', '', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -398,6 +401,16 @@ CREATE TABLE `post_category` (
   `id_post` int(5) NOT NULL,
   `id_category` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `post_category`
+--
+
+INSERT INTO `post_category` (`id_post_category`, `id_post`, `id_category`) VALUES
+(1, 1, 9),
+(2, 2, 9),
+(3, 3, 9),
+(4, 4, 9);
 
 -- --------------------------------------------------------
 
@@ -412,6 +425,20 @@ CREATE TABLE `post_description` (
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `post_description`
+--
+
+INSERT INTO `post_description` (`id_post_description`, `id_post`, `id_language`, `title`, `content`) VALUES
+(1, 1, 1, 'Montir Bengkel', '&lt;p&gt;Mobil yang ada di PT Sinar Sakti Sampoerna ini diperbaiki atau diservice sendiri oleh montir yang ada di Kantor. Sehingga mobil yang ingin dipakaii bisa berjalan tanpa ada kendala dan terhindar dari kerusakan yang parah.&lt;/p&gt;'),
+(2, 1, 2, 'Montir Bengkel', '&lt;p&gt;Mobil yang ada di PT Sinar Sakti Sampoerna ini diperbaiki atau diservice sendiri oleh montir yang ada di Kantor. Sehingga mobil yang ingin dipakaii bisa berjalan tanpa ada kendala dan terhindar dari kerusakan yang parah.&lt;/p&gt;'),
+(3, 2, 1, 'Operator', '&lt;p&gt;Pekerjaan yang dilakukan operator di PT Sinar Sakti Sampoerna ini membuatkan surat jalan pada mobil dan memberikan uang jalan pada sopir yang ingin melakukan aktivitasnya. operator juga melakuakan interaksi/hubungan pada perusahaan yang ingin bekerja sama atau yang sudah bekerja sama oleh PT Sinar Sakti Sampoerna&lt;/p&gt;'),
+(4, 2, 2, 'Operator', '&lt;p&gt;Pekerjaan yang dilakukan operator di PT Sinar Sakti Sampoerna ini membuatkan surat jalan pada mobil dan memberikan uang jalan pada sopir yang ingin melakukan aktivitasnya. operator juga melakuakan interaksi/hubungan pada perusahaan yang ingin bekerja sama atau yang sudah bekerja sama oleh PT Sinar Sakti Sampoerna&lt;/p&gt;'),
+(5, 3, 1, 'Bengkel Mobil', '&lt;p&gt;Tempat mobil pada saat akan diperbaiki oleh montir, dan tempat prasarana untuk perbaikan mobil&lt;/p&gt;'),
+(6, 3, 2, 'Bengkel Mobil', '&lt;p&gt;Tempat mobil pada saat akan diperbaiki oleh montir, dan tempat prasarana untuk perbaikan mobil&lt;/p&gt;'),
+(7, 4, 1, 'Tempat Parkir Mobil', '&lt;p&gt;Lahan kosong atau tempat untuk parkir mobil yang ada di PT Sinar Sakti Sampoerna pada saat mobil tidak dalah beraktivitas&lt;/p&gt;'),
+(8, 4, 2, 'Tempat Parkir Mobil', '&lt;p&gt;Lahan kosong atau tempat untuk parkir mobil yang ada di PT Sinar Sakti Sampoerna pada saat mobil tidak dalah beraktivitas&lt;/p&gt;');
 
 -- --------------------------------------------------------
 
@@ -446,13 +473,13 @@ INSERT INTO `setting` (`id_setting`, `groups`, `options`, `value`) VALUES
 (1, 'general', 'web_name', 'PT. Sinar Sakti Sampoerna'),
 (2, 'general', 'web_url', 'http://localhost/sinar'),
 (3, 'general', 'web_meta', 'Ekspedisi Angkutan Darat'),
-(4, 'general', 'web_keyword', 'popojicms buat sendiri rasa webmu'),
-(5, 'general', 'web_owner', 'PopojiCMS'),
-(6, 'general', 'email', 'dikyardianto8@gmail.com'),
-(7, 'general', 'telephone', '000-0000-0000'),
-(8, 'general', 'fax', '000-0000-0000'),
-(9, 'general', 'address', '&lt;strong&gt;Headquarters:&lt;/strong&gt;&lt;br&gt;\n795 Folsom Ave, Suite 600&lt;br&gt;\nSan Francisco, CA 94107'),
-(10, 'general', 'geocode', 'latitude: -6.1753871, longitude: 106.8249641,'),
+(4, 'general', 'web_keyword', 'PT. Sinar Sakti Sampoerna  Ekspedisi Angkutan Darat'),
+(5, 'general', 'web_owner', 'Team.Ruby'),
+(6, 'general', 'email', 'ptsinarsakti9@gmail.com'),
+(7, 'general', 'telephone', '0812-7814-1199'),
+(8, 'general', 'fax', '0812-7814-1199'),
+(9, 'general', 'address', '&lt;strong&gt;Alamat:&lt;/strong&gt;&lt;br&gt;\nBranti Raya, Branti, Kecamatan Natar Kabupaten Lampung Selatan&lt;br&gt;Lampung'),
+(10, 'general', 'geocode', 'latitude:-5.2325541, longitude: 105.1723954,'),
 (11, 'image', 'favicon', 'favicon.png'),
 (12, 'image', 'logo', 'logo.png'),
 (13, 'image', 'img_medium', '640x480'),
@@ -498,6 +525,16 @@ CREATE TABLE `tag` (
   `tag_seo` varchar(100) NOT NULL,
   `count` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tag`
+--
+
+INSERT INTO `tag` (`id_tag`, `title`, `tag_seo`, `count`) VALUES
+(1, 'montir', 'montir', 1),
+(2, 'operator', 'operator', 1),
+(3, 'bengkel', 'bengkel', 1),
+(4, 'parkir', 'parkir', 1);
 
 -- --------------------------------------------------------
 
@@ -547,7 +584,7 @@ INSERT INTO `traffic` (`ip`, `browser`, `os`, `platform`, `country`, `city`, `da
 ('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'Windows', '', '', '2018-10-13', 29, '1539432604'),
 ('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'Windows', '', '', '2018-10-17', 47, '1539787916'),
 ('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'Windows', '', '', '2018-10-18', 38, '1539865391'),
-('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'Windows', '', '', '2018-10-22', 6, '1540179611');
+('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'Windows', '', '', '2018-10-22', 24, '1540184899');
 
 -- --------------------------------------------------------
 
@@ -759,13 +796,13 @@ ALTER TABLE `album`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id_category` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_category` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `category_description`
 --
 ALTER TABLE `category_description`
-  MODIFY `id_category_description` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_category_description` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `comment`
@@ -789,7 +826,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id_gallery` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_gallery` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `language`
@@ -801,7 +838,7 @@ ALTER TABLE `language`
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `menu_group`
@@ -831,19 +868,19 @@ ALTER TABLE `pages_description`
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id_post` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_post` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `post_category`
 --
 ALTER TABLE `post_category`
-  MODIFY `id_post_category` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_post_category` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `post_description`
 --
 ALTER TABLE `post_description`
-  MODIFY `id_post_description` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_post_description` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `post_gallery`
@@ -867,7 +904,7 @@ ALTER TABLE `subscribe`
 -- AUTO_INCREMENT for table `tag`
 --
 ALTER TABLE `tag`
-  MODIFY `id_tag` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_tag` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `theme`
