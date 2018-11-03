@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2018 at 07:09 AM
+-- Generation Time: Nov 03, 2018 at 04:56 PM
 -- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.9
+-- PHP Version: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -387,7 +387,7 @@ CREATE TABLE `post` (
 INSERT INTO `post` (`id_post`, `seotitle`, `tag`, `date`, `time`, `publishdate`, `editor`, `active`, `headline`, `comment`, `picture`, `picture_description`, `hits`) VALUES
 (1, 'montir-bengkel', 'montir', '2018-10-22', '11:43:11', '2018-10-22 11:43:11', 1, 'Y', 'N', 'Y', 'img_20181018_091202.png', '', 1),
 (2, 'operator', 'operator', '2018-10-22', '11:44:53', '2018-10-22 11:44:53', 1, 'Y', 'N', 'Y', 'img_20181018_092338.png', '', 1),
-(3, 'bengkel-mobil', 'bengkel', '2018-10-22', '12:00:03', '2018-10-22 12:00:03', 1, 'Y', 'N', 'Y', 'img_20181018_092820.png', '', 1),
+(3, 'bengkel-mobil', 'bengkel', '2018-10-22', '12:00:03', '2018-10-22 12:00:03', 1, 'Y', 'N', 'Y', 'img_20181018_092820.png', '', 3),
 (4, 'tempat-parkir-mobil', 'parkir', '2018-10-22', '12:03:19', '2018-10-22 12:03:19', 1, 'Y', 'N', 'Y', 'img_20181018_091556.png', '', 1);
 
 -- --------------------------------------------------------
@@ -584,7 +584,9 @@ INSERT INTO `traffic` (`ip`, `browser`, `os`, `platform`, `country`, `city`, `da
 ('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'Windows', '', '', '2018-10-13', 29, '1539432604'),
 ('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'Windows', '', '', '2018-10-17', 47, '1539787916'),
 ('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'Windows', '', '', '2018-10-18', 38, '1539865391'),
-('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'Windows', '', '', '2018-10-22', 24, '1540184899');
+('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'Windows', '', '', '2018-10-22', 24, '1540184899'),
+('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'Windows', '', '', '2018-10-30', 29, '1540907781'),
+('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'Windows', '', '', '2018-11-03', 10, '1541260434');
 
 -- --------------------------------------------------------
 
@@ -614,7 +616,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `username`, `password`, `nama_lengkap`, `email`, `no_telp`, `bio`, `picture`, `level`, `block`, `id_session`, `tgl_daftar`, `forget_key`, `locktype`) VALUES
-(1, 'admin', '0192023a7bbd73250516f069df18b500', 'Super Administrator', 'dikyardianto8@gmail.com', '000-0000-0000', 'No matter how exciting or significant a person\'s life is, a poorly written biography will make it seem like a snore. On the other hand, a good biographer can draw insight from an ordinary life-because they recognize that even the most exciting life is an ordinary life! After all, a biography isn\'t supposed to be a collection of facts assembled in chronological order; it\'s the biographer\'s interpretation of how that life was different and important.', '', '1', 'N', 'r0dshabv549cvvk9f95isq2820', '2018-10-13', NULL, '0');
+(1, 'admin', '0192023a7bbd73250516f069df18b500', 'Super Administrator', 'dikyardianto8@gmail.com', '000-0000-0000', 'No matter how exciting or significant a person\'s life is, a poorly written biography will make it seem like a snore. On the other hand, a good biographer can draw insight from an ordinary life-because they recognize that even the most exciting life is an ordinary life! After all, a biography isn\'t supposed to be a collection of facts assembled in chronological order; it\'s the biographer\'s interpretation of how that life was different and important.', '', '1', 'N', 'e0qs4mukmb5qai358p435dms6h', '2018-10-13', NULL, '0');
 
 -- --------------------------------------------------------
 
@@ -791,133 +793,111 @@ ALTER TABLE `user_level`
 --
 ALTER TABLE `album`
   MODIFY `id_album` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
   MODIFY `id_category` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
 --
 -- AUTO_INCREMENT for table `category_description`
 --
 ALTER TABLE `category_description`
   MODIFY `id_category_description` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
 --
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
   MODIFY `id_comment` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `component`
 --
 ALTER TABLE `component`
   MODIFY `id_component` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
   MODIFY `id_contact` int(5) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
   MODIFY `id_gallery` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
 --
 -- AUTO_INCREMENT for table `language`
 --
 ALTER TABLE `language`
   MODIFY `id_language` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
   MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
-
 --
 -- AUTO_INCREMENT for table `menu_group`
 --
 ALTER TABLE `menu_group`
   MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `oauth`
 --
 ALTER TABLE `oauth`
   MODIFY `id_oauth` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
   MODIFY `id_pages` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `pages_description`
 --
 ALTER TABLE `pages_description`
   MODIFY `id_pages_description` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
   MODIFY `id_post` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `post_category`
 --
 ALTER TABLE `post_category`
   MODIFY `id_post_category` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `post_description`
 --
 ALTER TABLE `post_description`
   MODIFY `id_post_description` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
 --
 -- AUTO_INCREMENT for table `post_gallery`
 --
 ALTER TABLE `post_gallery`
   MODIFY `id_post_gallery` int(5) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `setting`
 --
 ALTER TABLE `setting`
   MODIFY `id_setting` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
-
 --
 -- AUTO_INCREMENT for table `subscribe`
 --
 ALTER TABLE `subscribe`
   MODIFY `id_subscribe` int(5) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `tag`
 --
 ALTER TABLE `tag`
   MODIFY `id_tag` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `theme`
 --
 ALTER TABLE `theme`
   MODIFY `id_theme` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `user_level`
 --
 ALTER TABLE `user_level`
-  MODIFY `id_level` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-COMMIT;
+  MODIFY `id_level` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
