@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 03, 2018 at 04:56 PM
+-- Generation Time: Nov 13, 2018 at 04:34 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -262,7 +262,8 @@ INSERT INTO `menu` (`id`, `parent_id`, `title`, `url`, `class`, `position`, `gro
 (64, 0, 'Gallery', 'album', '', 50, 3, 'Y', 'none'),
 (65, 0, 'Contact', 'contact', '', 50, 3, 'Y', 'none'),
 (66, 0, 'Sejarah', 'pages/sejarah', '', 2, 2, 'Y', 'none'),
-(67, 0, 'Tugas dan Fungsi', 'category/tugas-dan-fungsi', '', 4, 2, 'Y', 'none');
+(67, 0, 'Tugas dan Fungsi', 'category/tugas-dan-fungsi', '', 4, 2, 'Y', 'none'),
+(68, 50, 'Struktur Keanggotaan', 'pages/struktur-keanggotaan', '', 2, 2, 'Y', 'none');
 
 -- --------------------------------------------------------
 
@@ -330,7 +331,8 @@ CREATE TABLE `pages` (
 INSERT INTO `pages` (`id_pages`, `seotitle`, `picture`, `active`) VALUES
 (1, 'profil', '', 'Y'),
 (2, 'visi-misi', '', 'Y'),
-(3, 'sejarah', '', 'Y');
+(3, 'sejarah', '', 'Y'),
+(4, 'struktur-keanggotaan', '', 'Y');
 
 -- --------------------------------------------------------
 
@@ -356,7 +358,9 @@ INSERT INTO `pages_description` (`id_pages_description`, `id_pages`, `id_languag
 (3, 2, 1, 'Visi &amp; Misi', '&lt;p style=&quot;margin: 0in 0in 7.9pt; text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;&lt;img src=&quot;http://localhost/sinar/po-content/uploads/img_20181018_091056.png&quot; alt=&quot;&quot; width=&quot;521&quot; height=&quot;391&quot; /&gt;&lt;/span&gt;&lt;/p&gt;\r\n&lt;p style=&quot;margin: 0in 0in 7.9pt 0in;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;Visi Perusahaan:&lt;/span&gt;&lt;/p&gt;\r\n&lt;p style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;Menjadi salah satu perusahaan jasa angkutan yang terpercaya di bidang ekspedisi angkutan darat yang berfokus pada pelayanan, standart kualitas, dan mengutamakan kepuasan pelanggan.&lt;/span&gt;&lt;/p&gt;\r\n&lt;p style=&quot;box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; margin: 0in 0in 7.9pt 0in;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;\r\n&lt;p style=&quot;box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; margin: 0in 0in 7.9pt 0in;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;Misi Perusahaan:&lt;/span&gt;&lt;/p&gt;\r\n&lt;p style=&quot;box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; margin: 0in 0in 7.9pt 0in;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;1.&amp;nbsp;Menerapkan sistem dan prosedur pelayanan jasa secara profesional.&lt;/span&gt;&lt;/p&gt;\r\n&lt;p style=&quot;box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; margin: 0in 0in 7.9pt 0in;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;2.&amp;nbsp;Mengutamakan kepuasan konsumen dengan memberikan pelayanan terbaik&lt;/span&gt;&lt;/p&gt;\r\n&lt;p style=&quot;box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; margin: 0in 0in 7.9pt 0in;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;3.&amp;nbsp;Membangun kemitraan yang saling mendukung dan menguntungkan&lt;/span&gt;&lt;/p&gt;\r\n&lt;p style=&quot;box-sizing: border-box; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; word-spacing: 0px; margin: 0in 0in 7.9pt 0in;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;4. Membentuk tenaga kerja dengan etos kerja yang tinggi sehingga menciptakan rasa aman dan tenang bagi rekan bisnis sehingga terciptanya kepercayaan publik&lt;/span&gt;&lt;/p&gt;'),
 (4, 2, 2, 'Visi &amp; Misi', ''),
 (5, 3, 1, 'Sejarah', '&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;http://localhost/sinar/po-content/uploads/img_20181018_092234.png&quot; alt=&quot;&quot; width=&quot;493&quot; height=&quot;370&quot; /&gt;&lt;/p&gt;\r\n&lt;p style=&quot;margin: 0in 0in 7.9pt 0in;&quot;&gt;&lt;span style=&quot;font-size: 11.5pt; font-family: &#039;Lato&#039;,&#039;sans-serif&#039;; color: #2c3e50;&quot;&gt;Pemilik PT Sinar Sakti Sampoera ini adalah Bapak Sugiharto. Beliau adalah pengusaha yang sangat gigih dalam berjuang untuk mendapatkan kesuksesan seperti sekarang ini. PT Sinar Sakti Sampoerna ini dibangun pada tahun 1998 pada saat itu hanya mempunyai 4 mobil saja untuk menjalankan usaha sebagai angkutan darat (ekspedisi), 1 mobil milik pribadi dan 3 mobilnya milik orang tuanya. dan Pada tahun 2000 Bapak Sugiharto bertemu dengan rekan bisinis yang dimana disini diberikan kepercayaan untuk bisa mengambil mobil tanpa adanya DP, bapak tersebuk Bernama Hastono iyalah pemilih Showroom mobil. Lambat tahun usaha berjalan dan sehingga sudah banyak yang tahu dengan PT Sinar Sakti Sampoerna ini menyiapkan mobil untuk keperluan perusahaan-perusahaan. Pada saat itu memasarkannya hanya dengan dari mulut kemulut saja, tidak ada perantara apapun. dan pada saat ini tahun 2018 PT Sinar Sakti Sampoerna yang dipimpin oleh Bapak Sugiharto sudah memiliki kurang lebih 45 mobil diantaranya: Ragassa, Engkel, dan Tronton).&amp;nbsp;&lt;/span&gt;&lt;/p&gt;'),
-(6, 3, 2, 'Sejarah', '');
+(6, 3, 2, 'Sejarah', ''),
+(7, 4, 1, 'Struktur Keanggotaan', '&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;http://localhost/sinar/po-content/uploads/pt_1.jpg&quot; alt=&quot;&quot; width=&quot;700&quot; height=&quot;500&quot; /&gt;&lt;/p&gt;\r\n&lt;p style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;Struktur Keanggotaan:&lt;/span&gt;&lt;/p&gt;\r\n&lt;p style=&quot;text-align: left;&quot;&gt;1. PT Sinar Sakti Sampoerna dipimpin oleh bapak Sugiharto.&amp;nbsp;&lt;/p&gt;\r\n&lt;p style=&quot;text-align: left;&quot;&gt;2. Komisaris dalam PT Sinar Sakti Sampoerna dijalankan oleh bapak Budi Suroyo&lt;/p&gt;\r\n&lt;p style=&quot;text-align: left;&quot;&gt;3. Keuangan / Kasir yang dijalankan oleh ibu Eka&lt;/p&gt;\r\n&lt;p style=&quot;text-align: left;&quot;&gt;4. Serta jajaran karyawan Sopir dan Bengkel&lt;/p&gt;'),
+(8, 4, 2, 'Struktur Keanggotaan', '');
 
 -- --------------------------------------------------------
 
@@ -586,7 +590,9 @@ INSERT INTO `traffic` (`ip`, `browser`, `os`, `platform`, `country`, `city`, `da
 ('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'Windows', '', '', '2018-10-18', 38, '1539865391'),
 ('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'Windows', '', '', '2018-10-22', 24, '1540184899'),
 ('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'Windows', '', '', '2018-10-30', 29, '1540907781'),
-('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'Windows', '', '', '2018-11-03', 10, '1541260434');
+('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'Windows', '', '', '2018-11-03', 10, '1541260434'),
+('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'Windows', '', '', '2018-11-12', 24, '1542034238'),
+('::1', 'Chrome', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'Windows', '', '', '2018-11-13', 15, '1542079969');
 
 -- --------------------------------------------------------
 
@@ -616,7 +622,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `username`, `password`, `nama_lengkap`, `email`, `no_telp`, `bio`, `picture`, `level`, `block`, `id_session`, `tgl_daftar`, `forget_key`, `locktype`) VALUES
-(1, 'admin', '0192023a7bbd73250516f069df18b500', 'Super Administrator', 'dikyardianto8@gmail.com', '000-0000-0000', 'No matter how exciting or significant a person\'s life is, a poorly written biography will make it seem like a snore. On the other hand, a good biographer can draw insight from an ordinary life-because they recognize that even the most exciting life is an ordinary life! After all, a biography isn\'t supposed to be a collection of facts assembled in chronological order; it\'s the biographer\'s interpretation of how that life was different and important.', '', '1', 'N', 'e0qs4mukmb5qai358p435dms6h', '2018-10-13', NULL, '0');
+(1, 'admin', '0192023a7bbd73250516f069df18b500', 'Super Administrator', 'dikyardianto8@gmail.com', '000-0000-0000', 'No matter how exciting or significant a person\'s life is, a poorly written biography will make it seem like a snore. On the other hand, a good biographer can draw insight from an ordinary life-because they recognize that even the most exciting life is an ordinary life! After all, a biography isn\'t supposed to be a collection of facts assembled in chronological order; it\'s the biographer\'s interpretation of how that life was different and important.', '', '1', 'N', '6f86t9s6cgs6ku476m5hjh6a4u', '2018-10-13', NULL, '0');
 
 -- --------------------------------------------------------
 
@@ -832,7 +838,7 @@ ALTER TABLE `language`
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 --
 -- AUTO_INCREMENT for table `menu_group`
 --
@@ -847,12 +853,12 @@ ALTER TABLE `oauth`
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id_pages` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_pages` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `pages_description`
 --
 ALTER TABLE `pages_description`
-  MODIFY `id_pages_description` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_pages_description` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `post`
 --
